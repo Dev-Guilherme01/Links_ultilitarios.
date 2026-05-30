@@ -70,18 +70,9 @@ cd utilinks
 npm install
 ```
 
-### 3. Configure as variaveis de ambiente (opcional)
-
-Crie um arquivo `.env` na raiz do projeto se desejar usar recursos avancados:
-
-```env
-VITE_SUPABASE_URL=sua_url_do_supabase
-VITE_SUPABASE_ANON_KEY=sua_chave_anonima_supabase
-```
-
 O aplicativo funciona perfeitamente sem configuracoes adicionais para uso basico.
 
-### 4. Execute o servidor de desenvolvimento
+### 3. Execute o servidor de desenvolvimento
 
 ```bash
 npm run dev
@@ -89,7 +80,7 @@ npm run dev
 
 O aplicativo estara disponivel em: `http://localhost:5173`
 
-### 5. Build para producao
+### 4. Build para producao
 
 ```bash
 npm run build
@@ -208,21 +199,6 @@ Contribuicoes sao bem-vindas! Para contribuir:
 
 ---
 
-## Roadmap e Futuras Melhorias
-
-O projeto esta em desenvolvimento ativo. Proximos passos planejados:
-
-- [ ] Integracao com banco de dados para salvar feedbacks
-- [ ] Sistema de autenticacao opcional para usuarios
-- [ ] Painel administrativo para gerenciar servicos
-- [ ] Busca e filtros de servicos
-- [ ] Notificacoes sobre atualizacoes de servicos
-- [ ] Modo escuro (dark mode)
-- [ ] Internacionalizacao (i18n) para outros idiomas
-- [ ] PWA (Progressive Web App) para uso offline
-
----
-
 ## Licenca
 
 Este projeto esta sob a licenca MIT. Veja o arquivo `LICENSE` para mais detalhes.
@@ -238,13 +214,6 @@ Desenvolvido para a comunidade de Acailandia, Maranhao.
 ## Contato e Suporte
 
 - Use a aba **Feedback** no proprio aplicativo para reportar problemas
-- Para questoes urgentes relacionadas a servicos publicos, entre em contato diretamente com os orgaos oficiais
-
----
-
-## Agradecimentos
-
-Agradecemos a todos os cidadaos de Acailandia que inspiraram a criacao deste projeto, e a todos que contribuem para melhora-lo continuamente.
 
 ---
 
