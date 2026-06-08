@@ -36,23 +36,36 @@ export default function CategoryCard({ category, onClick }: CategoryCardProps) {
     <button
       onClick={() => onClick(category)}
       className="relative flex flex-col items-start justify-between rounded-2xl p-4 text-left transition-all duration-200 hover:scale-[1.03] hover:shadow-xl active:scale-[0.98] focus:outline-none focus:ring-4 focus:ring-white/40"
-      style={{ backgroundColor: category.color, minHeight: '148px' }}
+      style={{ backgroundColor: category.color, minHeight: '220px' }}
       aria-label={`Abrir categoria ${category.title}`}
     >
       <div className="mb-2 rounded-xl bg-white/20 p-2.5">
-        <Icon size={28} color="#fff" strokeWidth={1.8} />
+        <Icon size={30} color="#fff" strokeWidth={1.8} />
       </div>
 
       <div className="flex-1">
-        <h2 className="text-[15px] font-bold leading-tight text-white">{category.title}</h2>
-        <p className="mt-1 text-[11px] leading-snug text-white/85">{category.description}</p>
-      </div>
+  <h2 className="text-xl font-bold leading-tight text-white">
+    {category.title}
+  </h2>
 
-      <div className="mt-3 flex w-full justify-end">
-        <span className="flex h-6 w-6 items-center justify-center rounded-full bg-white/25">
-          <ChevronRight size={14} color="#fff" strokeWidth={2.5} />
-        </span>
-      </div>
+  <div className="mt-3 space-y-1">
+    {category.services.slice(0, 3).map((service) => (
+      <p key={service.id} className="text-xs text-white/90">
+        ▸ {service.name}
+      </p>
+    ))}
+  </div>
+</div>
+
+<div className="mt-4 flex w-full items-center justify-between">
+  <span className="text-xs font-semibold text-white/80">
+    
+  </span>
+
+  <span className="flex h-8 w-8 items-center justify-center rounded-full bg-white/25">
+    <ChevronRight size={18} color="#fff" strokeWidth={2.5} />
+  </span>
+</div>
     </button>
   );
 }

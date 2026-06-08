@@ -11,14 +11,21 @@ export default function Home({ categories, onCategoryClick }: HomeProps) {
   return (
     <div className="flex min-h-screen flex-col bg-gray-100">
       {/* Header */}
-      <header className="bg-[#0D2B5E] px-4 py-6 text-center md:px-8 md:py-10">
-        <h1 className="text-3xl font-extrabold tracking-tight text-white md:text-4xl">Utilinks</h1>
-        <p className="mt-1 text-sm text-blue-200 md:text-base">Serviços públicos ao alcance de todos</p>
+      <header className="relative left-1/2 right-1/2 -ml-[50vw] -mr-[50vw] w-screen bg-[#0D2B5E] px-4 py-8 text-center md:px-8 md:py-12">
+        <h1 className="text-5xl font-extrabold tracking-tight text-white md:text-5xl">UTILINKS</h1>
+        <p className="mt-3 text-lg text-blue-200 md:text-xl">
+  Serviços públicos ao alcance de todos
+</p>
       </header>
 
       {/* Grid */}
       <main className="flex-1 px-3 py-4 md:px-8 md:py-8">
-        <div className="grid grid-cols-3 gap-3 md:grid-cols-4 lg:grid-cols-6 md:gap-4 lg:gap-5">
+        <div
+  className="grid gap-5"
+  style={{
+    gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))',
+  }}
+>
           {categories.map((cat) => (
             <CategoryCard key={cat.id} category={cat} onClick={onCategoryClick} />
           ))}
